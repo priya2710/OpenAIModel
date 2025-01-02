@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "8d019402-448f-4dd3-b634-eb511c742c3b",
+		"name": "Backend-Python",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35311333"
+	},
+	"item": [
+		{
+			"name": "IngestionRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1efc8de9-fa04-4370-a4fd-343dc3c8ceff"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/ingestion/ingest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ingestion",
+						"ingest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q&A",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": \"What is the capital of France?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/qna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"qna"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Selection",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/selection/select?selected_ids=1&selected_ids=2&selected_ids=3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"selection",
+						"select"
+					],
+					"query": [
+						{
+							"key": "selected_ids",
+							"value": "1"
+						},
+						{
+							"key": "selected_ids",
+							"value": "2"
+						},
+						{
+							"key": "selected_ids",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
