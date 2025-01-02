@@ -30,8 +30,8 @@ This project implements a backend service using **FastAPI** to handle document i
 Clone the project from GitHub:
 
 ```bash
-git clone https://github.com/priya2710/OpenAIModel.git
-cd OpenAIModel
+git clone https://github.com/priya2710/Python-Backend-Assignment.git
+cd Python-Backend-Assignment
 ```
 
 ### 2. Set Up a Virtual Environment
